@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7016FB791AC0931100126279 /* Soft_Tap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7016FB781AC0931100126279 /* Soft_Tap.wav */; };
+		7016FB7C1AC0995900126279 /* RemovalEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 7016FB7A1AC0995900126279 /* RemovalEmitter.sks */; };
+		7016FB7D1AC0995900126279 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 7016FB7B1AC0995900126279 /* spark.png */; };
+		7016FB811AC0B8BE00126279 /* PowerUp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7016FB801AC0B8BE00126279 /* PowerUp.wav */; };
+		7016FB831AC0B97400126279 /* Shimmer.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7016FB821AC0B97400126279 /* Shimmer.wav */; };
+		7016FB851AC0C48000126279 /* PowerDown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7016FB841AC0C48000126279 /* PowerDown.wav */; };
+		703A7EA31ABDF12500CA37EC /* Bubble_Pop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 703A7EA21ABDF12500CA37EC /* Bubble_Pop.wav */; };
+		706E005B1AC32F0F00920724 /* Burning.wav in Resources */ = {isa = PBXBuildFile; fileRef = 706E005A1AC32F0F00920724 /* Burning.wav */; };
+		706E005D1AC3301700920724 /* SparkEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 706E005C1AC3301700920724 /* SparkEmitter.sks */; };
+		706E005F1AC3317000920724 /* BlockSparkEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 706E005E1AC3317000920724 /* BlockSparkEmitter.sks */; };
+		706E00611AC3333900920724 /* Electricity.wav in Resources */ = {isa = PBXBuildFile; fileRef = 706E00601AC3333900920724 /* Electricity.wav */; };
+		706E00631AC38BF600920724 /* SKLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 706E00621AC38BF600920724 /* SKLogo.png */; };
+		709F70071AC48FB000C5FA15 /* Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 709F70061AC48FB000C5FA15 /* Plus.png */; };
+		709F70111AC4D8EF00C5FA15 /* PlusEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 709F70101AC4D8EF00C5FA15 /* PlusEmitter.sks */; };
+		70DADEC81ABB8FB9002C4E19 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DADEC71ABB8FB8002C4E19 /* Settings.swift */; };
+		70DADECA1ABBAD79002C4E19 /* Level1Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DADEC91ABBAD79002C4E19 /* Level1Scene.swift */; };
+		70DADECC1ABBADB3002C4E19 /* Level1Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70DADECB1ABBADB3002C4E19 /* Level1Scene.sks */; };
 		70E7307E1AB3CBE0009F3684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E7307D1AB3CBE0009F3684 /* AppDelegate.swift */; };
 		70E730801AB3CBE0009F3684 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E7307F1AB3CBE0009F3684 /* GameScene.sks */; };
 		70E730821AB3CBE0009F3684 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E730811AB3CBE0009F3684 /* GameScene.swift */; };
@@ -15,6 +32,12 @@
 		70E730891AB3CBE0009F3684 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E730881AB3CBE0009F3684 /* Images.xcassets */; };
 		70E7308C1AB3CBE0009F3684 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70E7308A1AB3CBE0009F3684 /* LaunchScreen.xib */; };
 		70E730981AB3CBE0009F3684 /* Toppling_TowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E730971AB3CBE0009F3684 /* Toppling_TowerTests.swift */; };
+		70E730A21AB3CDB1009F3684 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E730A11AB3CDB1009F3684 /* MenuScene.swift */; };
+		70E730A41AB3D0BC009F3684 /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E730A31AB3D0BC009F3684 /* MenuScene.sks */; };
+		70F50A6A1AC1FE8700FC656F /* FlameEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70F50A681AC1FE8700FC656F /* FlameEmitter.sks */; };
+		70F50A6D1AC205B000FC656F /* BlockFlameEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70F50A6C1AC205B000FC656F /* BlockFlameEmitter.sks */; };
+		70F50A711AC22F0100FC656F /* Upbeat_Music.wav in Resources */ = {isa = PBXBuildFile; fileRef = 70F50A701AC22F0100FC656F /* Upbeat_Music.wav */; };
+		70F50A731AC2314B00FC656F /* Ambient_Beat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 70F50A721AC2314B00FC656F /* Ambient_Beat.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,11 +51,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7016FB781AC0931100126279 /* Soft_Tap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Soft_Tap.wav; sourceTree = "<group>"; };
+		7016FB7A1AC0995900126279 /* RemovalEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RemovalEmitter.sks; sourceTree = "<group>"; };
+		7016FB7B1AC0995900126279 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		7016FB801AC0B8BE00126279 /* PowerUp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = PowerUp.wav; sourceTree = "<group>"; };
+		7016FB821AC0B97400126279 /* Shimmer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Shimmer.wav; sourceTree = "<group>"; };
+		7016FB841AC0C48000126279 /* PowerDown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = PowerDown.wav; sourceTree = "<group>"; };
+		703A7EA21ABDF12500CA37EC /* Bubble_Pop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Bubble_Pop.wav; sourceTree = "<group>"; };
+		706E005A1AC32F0F00920724 /* Burning.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Burning.wav; sourceTree = "<group>"; };
+		706E005C1AC3301700920724 /* SparkEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparkEmitter.sks; sourceTree = "<group>"; };
+		706E005E1AC3317000920724 /* BlockSparkEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BlockSparkEmitter.sks; sourceTree = "<group>"; };
+		706E00601AC3333900920724 /* Electricity.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Electricity.wav; sourceTree = "<group>"; };
+		706E00621AC38BF600920724 /* SKLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SKLogo.png; sourceTree = "<group>"; };
+		709F70061AC48FB000C5FA15 /* Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Plus.png; sourceTree = "<group>"; };
+		709F70101AC4D8EF00C5FA15 /* PlusEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = PlusEmitter.sks; sourceTree = "<group>"; };
+		70DADEC71ABB8FB8002C4E19 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		70DADEC91ABBAD79002C4E19 /* Level1Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1Scene.swift; sourceTree = "<group>"; };
+		70DADECB1ABBADB3002C4E19 /* Level1Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level1Scene.sks; sourceTree = "<group>"; };
 		70E730781AB3CBE0009F3684 /* Toppling Tower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Toppling Tower.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E7307C1AB3CBE0009F3684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70E7307D1AB3CBE0009F3684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70E7307F1AB3CBE0009F3684 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		70E730811AB3CBE0009F3684 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		70E730811AB3CBE0009F3684 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		70E730831AB3CBE0009F3684 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		70E730861AB3CBE0009F3684 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70E730881AB3CBE0009F3684 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -40,6 +80,12 @@
 		70E730911AB3CBE0009F3684 /* Toppling TowerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Toppling TowerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E730961AB3CBE0009F3684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70E730971AB3CBE0009F3684 /* Toppling_TowerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toppling_TowerTests.swift; sourceTree = "<group>"; };
+		70E730A11AB3CDB1009F3684 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		70E730A31AB3D0BC009F3684 /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
+		70F50A681AC1FE8700FC656F /* FlameEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = FlameEmitter.sks; path = ../FlameEmitter.sks; sourceTree = "<group>"; };
+		70F50A6C1AC205B000FC656F /* BlockFlameEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BlockFlameEmitter.sks; sourceTree = "<group>"; };
+		70F50A701AC22F0100FC656F /* Upbeat_Music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Upbeat_Music.wav; sourceTree = "<group>"; };
+		70F50A721AC2314B00FC656F /* Ambient_Beat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Ambient_Beat.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +131,11 @@
 				70E7307F1AB3CBE0009F3684 /* GameScene.sks */,
 				70E730811AB3CBE0009F3684 /* GameScene.swift */,
 				70E730831AB3CBE0009F3684 /* GameViewController.swift */,
+				70E730A31AB3D0BC009F3684 /* MenuScene.sks */,
+				70E730A11AB3CDB1009F3684 /* MenuScene.swift */,
+				70DADECB1ABBADB3002C4E19 /* Level1Scene.sks */,
+				70DADEC91ABBAD79002C4E19 /* Level1Scene.swift */,
+				70DADEC71ABB8FB8002C4E19 /* Settings.swift */,
 				70E730851AB3CBE0009F3684 /* Main.storyboard */,
 				70E730881AB3CBE0009F3684 /* Images.xcassets */,
 				70E7308A1AB3CBE0009F3684 /* LaunchScreen.xib */,
@@ -96,6 +147,24 @@
 		70E7307B1AB3CBE0009F3684 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				703A7EA21ABDF12500CA37EC /* Bubble_Pop.wav */,
+				7016FB841AC0C48000126279 /* PowerDown.wav */,
+				706E00601AC3333900920724 /* Electricity.wav */,
+				70F50A721AC2314B00FC656F /* Ambient_Beat.wav */,
+				7016FB821AC0B97400126279 /* Shimmer.wav */,
+				706E005A1AC32F0F00920724 /* Burning.wav */,
+				7016FB801AC0B8BE00126279 /* PowerUp.wav */,
+				70F50A701AC22F0100FC656F /* Upbeat_Music.wav */,
+				7016FB781AC0931100126279 /* Soft_Tap.wav */,
+				7016FB7A1AC0995900126279 /* RemovalEmitter.sks */,
+				706E005C1AC3301700920724 /* SparkEmitter.sks */,
+				70F50A681AC1FE8700FC656F /* FlameEmitter.sks */,
+				709F70101AC4D8EF00C5FA15 /* PlusEmitter.sks */,
+				706E005E1AC3317000920724 /* BlockSparkEmitter.sks */,
+				70F50A6C1AC205B000FC656F /* BlockFlameEmitter.sks */,
+				709F70061AC48FB000C5FA15 /* Plus.png */,
+				706E00621AC38BF600920724 /* SKLogo.png */,
+				7016FB7B1AC0995900126279 /* spark.png */,
 				70E7307C1AB3CBE0009F3684 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -198,10 +267,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7016FB791AC0931100126279 /* Soft_Tap.wav in Resources */,
+				70F50A6D1AC205B000FC656F /* BlockFlameEmitter.sks in Resources */,
+				7016FB811AC0B8BE00126279 /* PowerUp.wav in Resources */,
 				70E7308C1AB3CBE0009F3684 /* LaunchScreen.xib in Resources */,
+				70F50A731AC2314B00FC656F /* Ambient_Beat.wav in Resources */,
 				70E730891AB3CBE0009F3684 /* Images.xcassets in Resources */,
+				706E005F1AC3317000920724 /* BlockSparkEmitter.sks in Resources */,
+				706E00611AC3333900920724 /* Electricity.wav in Resources */,
 				70E730801AB3CBE0009F3684 /* GameScene.sks in Resources */,
+				709F70071AC48FB000C5FA15 /* Plus.png in Resources */,
+				7016FB7C1AC0995900126279 /* RemovalEmitter.sks in Resources */,
+				706E005D1AC3301700920724 /* SparkEmitter.sks in Resources */,
+				7016FB7D1AC0995900126279 /* spark.png in Resources */,
+				7016FB831AC0B97400126279 /* Shimmer.wav in Resources */,
+				706E005B1AC32F0F00920724 /* Burning.wav in Resources */,
+				70F50A6A1AC1FE8700FC656F /* FlameEmitter.sks in Resources */,
+				70DADECC1ABBADB3002C4E19 /* Level1Scene.sks in Resources */,
+				7016FB851AC0C48000126279 /* PowerDown.wav in Resources */,
+				70E730A41AB3D0BC009F3684 /* MenuScene.sks in Resources */,
+				706E00631AC38BF600920724 /* SKLogo.png in Resources */,
+				709F70111AC4D8EF00C5FA15 /* PlusEmitter.sks in Resources */,
 				70E730871AB3CBE0009F3684 /* Main.storyboard in Resources */,
+				70F50A711AC22F0100FC656F /* Upbeat_Music.wav in Resources */,
+				703A7EA31ABDF12500CA37EC /* Bubble_Pop.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,8 +309,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				70E730821AB3CBE0009F3684 /* GameScene.swift in Sources */,
+				70E730A21AB3CDB1009F3684 /* MenuScene.swift in Sources */,
 				70E730841AB3CBE0009F3684 /* GameViewController.swift in Sources */,
+				70DADECA1ABBAD79002C4E19 /* Level1Scene.swift in Sources */,
 				70E7307E1AB3CBE0009F3684 /* AppDelegate.swift in Sources */,
+				70DADEC81ABB8FB9002C4E19 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +505,7 @@
 				70E7309D1AB3CBE0009F3684 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70E7309E1AB3CBE0009F3684 /* Build configuration list for PBXNativeTarget "Toppling TowerTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +514,7 @@
 				70E730A01AB3CBE0009F3684 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
