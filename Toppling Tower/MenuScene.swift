@@ -22,6 +22,13 @@ class MenuScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    func makeTitleImage(imageName: String) -> SKSpriteNode {
+        let titleImage = SKSpriteNode(imageNamed: imageName)
+        titleImage.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMaxY(self.frame)-self.frame.height/8)
+        titleImage.runAction(SKAction.scaleTo(0.32, duration: 0))
+        return titleImage
+    }
+    
     func makeTitleLabel(title: String, fontSize: CGFloat) -> SKLabelNode {
         self.physicsWorld.gravity = CGVector(dx: 0, dy: -2)
         let titleNode = SKLabelNode(text: title)
@@ -39,6 +46,7 @@ class MenuScene: SKScene, SKPhysicsContactDelegate {
         let blockNode = SKShapeNode(rect: CGRectMake(0, 0, screenWidth-10, 120))//120
         buttonNode.position = CGPointMake(CGRectGetMidX(self.frame)-blockNode.frame.width/2, yLocation)
         buttonNode.physicsBody = SKPhysicsBody(rectangleOfSize: CGSizeMake(blockNode.frame.width, blockNode.frame.height), center: CGPointMake(blockNode.frame.width/2, blockNode.frame.height/2))
+        buttonNode.physicsBody?.friction = 1.0
         blockNode.fillColor = fillColor
         blockNode.strokeColor = strokeColor
         blockNode.name = "blockNode" + name
@@ -68,16 +76,16 @@ class MenuScene: SKScene, SKPhysicsContactDelegate {
         
         UIApplication.sharedApplication().idleTimerDisabled = false
         
-        let title = makeTitleLabel("Toppling Towers", fontSize: 60)
+        let title = makeTitleImage("TitleImage") //makeTitleLabel("Toppling Towers", fontSize: 60)
         self.addChild(title)
         
         motionManager.startAccelerometerUpdates()
         
-        let blockMode1 = makeLevelButton(colorLightOrange, strokeColor: SKColor.blackColor(), text: "Mode 1", name: "blockMode1", yLocation: CGRectGetMidY(self.frame)+200)
+        let blockMode1 = makeLevelButton(colorLightOrange, strokeColor: SKColor.blackColor(), text: "Play", name: "blockMode1", yLocation: CGRectGetMidY(self.frame)+200)
         self.addChild(blockMode1)
-        let blockMode2 = makeLevelButton(colorLightRed, strokeColor: SKColor.blackColor(), text: "Mode 2", name: "blockMode2", yLocation: CGRectGetMidY(self.frame))
+        let blockMode2 = makeLevelButton(colorLightRed, strokeColor: SKColor.blackColor(), text: "Guide", name: "blockMode2", yLocation: CGRectGetMidY(self.frame))
         self.addChild(blockMode2)
-        let blockMode3 = makeLevelButton(colorLightYellow, strokeColor: SKColor.blackColor(), text: "Mode 3", name: "blockMode3", yLocation: CGRectGetMidY(self.frame)-200)
+        let blockMode3 = makeLevelButton(colorLightYellow, strokeColor: SKColor.blackColor(), text: "About", name: "blockMode3", yLocation: CGRectGetMidY(self.frame)-200)
         self.addChild(blockMode3)
     }
     
@@ -85,7 +93,7 @@ class MenuScene: SKScene, SKPhysicsContactDelegate {
         updateGravity()
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         /* Called when a touch begins */
 
         let nodeMode1 = self.childNodeWithName("blockMode1")

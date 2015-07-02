@@ -101,6 +101,7 @@ var currentBlocksMissed: CGFloat = 0
 let scoreLabelName = "scoreLabel"
 let scoreLabelFontSize: CGFloat = 20
 
+let scoreupdateCounterMax: Int = 20
 var scoreUpdateCounterLimit: Int = 20
 var scoreUpdateCounter: Int = 0
 
@@ -208,7 +209,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         finalScoreLabel.text = "Score: \(currentScore)"
         finalScoreLabel.fontSize = finalScoreLabelFontSize
         finalScoreLabel.fontColor = finalScoreLabelFontColor
-        let label = self.childNodeWithName(labelName) as SKLabelNode
+        let label = self.childNodeWithName(labelName) as! SKLabelNode
         finalScoreLabel.position = CGPoint(x: label.position.x, y: label.position.y - (finalScoreLabel.frame.height + 20))
         return finalScoreLabel
     }
@@ -231,7 +232,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.runAction(playPowerUp)
         powerUpCounter = powerUpCountLimit
         activePowerUp = type
-        let platform = self.childNodeWithName(platformName) as SKShapeNode
+        let platform = self.childNodeWithName(platformName) as! SKShapeNode
         switch type {
         case .Removal:
             platform.strokeColor = colorBlue
@@ -257,10 +258,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         else {
             if activePowerUp == .Plus {
-                scoreUpdateCounterLimit = scoreUpdateCounterLimit*2
+                scoreUpdateCounterLimit = scoreupdateCounterMax
             }
             activePowerUp = .None
-            let platform = self.childNodeWithName(platformName) as SKShapeNode
+            let platform = self.childNodeWithName(platformName) as! SKShapeNode
             platform.strokeColor = SKColor.clearColor()
         }
     }
@@ -293,7 +294,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             println("Error: PowerUp type not applicable")
         }
         
-        let sparkEmitterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource(ParticleEffectFile, ofType: "sks")!) as SKEmitterNode
+        let sparkEmitterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource(ParticleEffectFile, ofType: "sks")!) as! SKEmitterNode
         let shapeNode = SKShapeNode(circleOfRadius: powerUpRadius)
         shapeNode.name = "shapeNode"
         sparkEmitterNode.name = emitterNodeName
@@ -319,7 +320,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func makeEmitterNodeForShapeNode(shapeNode: SKShapeNode, color: SKColor, EmitterFileName: String, makePhysicsBody: Bool, useDefaultColor: Bool, collideWithPlatform: Bool) -> SKEmitterNode {
-        let EmitterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource(EmitterFileName, ofType: "sks")!) as SKEmitterNode
+        let EmitterNode = NSKeyedUnarchiver.unarchiveObjectWithFile(NSBundle.mainBundle().pathForResource(EmitterFileName, ofType: "sks")!) as! SKEmitterNode
         EmitterNode.name = emitterNodeName
         EmitterNode.particlePositionRange.dx = shapeNode.frame.width
         EmitterNode.particlePositionRange.dy = shapeNode.frame.height
@@ -352,6 +353,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsBody?.categoryBitMask = PhysicsCategory.Border.rawValue
         self.physicsBody?.collisionBitMask = PhysicsCategory.Platform.rawValue
         self.physicsBody?.contactTestBitMask = PhysicsCategory.Block.rawValue
+    }
+    
+//    func makePlusAndLabelNode(label: String) {
+//        let 
+//    }
+    
+    func makePlusPointsNode(block: SKShapeNode, label: String) {
+        self.enumerateChildNodesWithName("block*"){
+            node, stop in
+            
+        }
     }
     
     func makePlatform() -> SKNode {
@@ -518,7 +530,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 node.runAction(action)
                 node.name = "removed powerUp"
             }
-            let label = self.childNodeWithName("label") as SKLabelNode
+            let label = self.childNodeWithName("label") as! SKLabelNode
             label.text = "Game Over"
             let finalScoreLabel = makeFinalScoreLabel()
             self.addChild(finalScoreLabel)
@@ -531,7 +543,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         println("GAME SHOULD RESET")
         currentBlocksMissed = 0
         currentScore = 0
+        scoreUpdateCounterLimit = scoreupdateCounterMax
         blockSpawningFrequency = 400
+        powerUpCounter = 0
         powerUpSpawningCounter = 2500
         blockSpawningCounter = 400
         self.enumerateChildNodesWithName("*") {
@@ -543,7 +557,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func movePlatformFromAccelerometerData(currentTime: CFTimeInterval) {
         
-        let platform = childNodeWithName(platformName) as SKShapeNode
+        let platform = childNodeWithName(platformName) as! SKShapeNode
         
         if let data = motionManager.accelerometerData {
             
@@ -567,7 +581,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    override func didMoveToView(view: SKView) {
+     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         motionManager.startAccelerometerUpdates()
         UIApplication.sharedApplication().idleTimerDisabled = true
@@ -575,13 +589,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    override func update(currentTime: NSTimeInterval) {
-        let platform = childNodeWithName(platformName) as SKShapeNode
+     override func update(currentTime: NSTimeInterval) {
+        let platform = childNodeWithName(platformName) as! SKShapeNode
         platform.position.y = platformYPosition
         movePlatformFromAccelerometerData(currentTime)
         RemoveBlocksOutOfBounds()
-        let label = self.childNodeWithName(labelName) as SKLabelNode
-        let scoreLabel = self.childNodeWithName(scoreLabelName) as SKLabelNode
+        let label = self.childNodeWithName(labelName) as! SKLabelNode
+        let scoreLabel = self.childNodeWithName(scoreLabelName) as! SKLabelNode
         if CheckForGameOver() == false {
             dropBlocksRandomly(blockSpawningFrequency)
             dropPowerUpsRandomly(powerUpSpawnFrequency)
@@ -640,7 +654,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.enumerateChildNodesWithName("block*") {
             node, stop in
             if node.position.y < CGRectGetMinY(self.frame) {
-                self.RemoveBlock(node as SKShapeNode, method: .Shrink)
+                self.RemoveBlock(node as! SKShapeNode, method: .Shrink)
                 currentBlocksMissed += 1
                 
                 let label = self.childNodeWithName(labelName)
@@ -662,9 +676,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             case PhysicsCategory.Platform.rawValue | PhysicsCategory.Block.rawValue:
                 var block: SKShapeNode
                 if contact.bodyA.categoryBitMask == PhysicsCategory.Block.rawValue {
-                    block = contact.bodyA.node as SKShapeNode
+                    block = contact.bodyA.node as! SKShapeNode
                 } else {
-                    block = contact.bodyB.node as SKShapeNode
+                    block = contact.bodyB.node as! SKShapeNode
                 }
                 blocksTouchingPlatform.append(block)
                 self.runAction(playTap)
@@ -700,9 +714,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             case PhysicsCategory.Platform.rawValue | PhysicsCategory.Block.rawValue:
                 var block: SKShapeNode
                 if contact.bodyA.categoryBitMask == PhysicsCategory.Block.rawValue {
-                    block = contact.bodyA.node as SKShapeNode
+                    block = contact.bodyA.node as! SKShapeNode
                 } else {
-                    block = contact.bodyB.node as SKShapeNode
+                    block = contact.bodyB.node as! SKShapeNode
                 }
                 
                 if contains(blocksTouchingPlatform, block) {

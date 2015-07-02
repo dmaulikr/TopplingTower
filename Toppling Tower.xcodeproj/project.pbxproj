@@ -24,6 +24,7 @@
 		70DADEC81ABB8FB9002C4E19 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DADEC71ABB8FB8002C4E19 /* Settings.swift */; };
 		70DADECA1ABBAD79002C4E19 /* Level1Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DADEC91ABBAD79002C4E19 /* Level1Scene.swift */; };
 		70DADECC1ABBADB3002C4E19 /* Level1Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70DADECB1ABBADB3002C4E19 /* Level1Scene.sks */; };
+		70E113B31AC739E400651FA8 /* TitleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E113B21AC739E400651FA8 /* TitleImage.png */; };
 		70E7307E1AB3CBE0009F3684 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E7307D1AB3CBE0009F3684 /* AppDelegate.swift */; };
 		70E730801AB3CBE0009F3684 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 70E7307F1AB3CBE0009F3684 /* GameScene.sks */; };
 		70E730821AB3CBE0009F3684 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E730811AB3CBE0009F3684 /* GameScene.swift */; };
@@ -68,6 +69,7 @@
 		70DADEC71ABB8FB8002C4E19 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		70DADEC91ABBAD79002C4E19 /* Level1Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level1Scene.swift; sourceTree = "<group>"; };
 		70DADECB1ABBADB3002C4E19 /* Level1Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Level1Scene.sks; sourceTree = "<group>"; };
+		70E113B21AC739E400651FA8 /* TitleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TitleImage.png; sourceTree = "<group>"; };
 		70E730781AB3CBE0009F3684 /* Toppling Tower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Toppling Tower.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E7307C1AB3CBE0009F3684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70E7307D1AB3CBE0009F3684 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				7016FB801AC0B8BE00126279 /* PowerUp.wav */,
 				70F50A701AC22F0100FC656F /* Upbeat_Music.wav */,
 				7016FB781AC0931100126279 /* Soft_Tap.wav */,
+				70E113B21AC739E400651FA8 /* TitleImage.png */,
 				7016FB7A1AC0995900126279 /* RemovalEmitter.sks */,
 				706E005C1AC3301700920724 /* SparkEmitter.sks */,
 				70F50A681AC1FE8700FC656F /* FlameEmitter.sks */,
@@ -271,6 +274,7 @@
 				70F50A6D1AC205B000FC656F /* BlockFlameEmitter.sks in Resources */,
 				7016FB811AC0B8BE00126279 /* PowerUp.wav in Resources */,
 				70E7308C1AB3CBE0009F3684 /* LaunchScreen.xib in Resources */,
+				70E113B31AC739E400651FA8 /* TitleImage.png in Resources */,
 				70F50A731AC2314B00FC656F /* Ambient_Beat.wav in Resources */,
 				70E730891AB3CBE0009F3684 /* Images.xcassets in Resources */,
 				706E005F1AC3317000920724 /* BlockSparkEmitter.sks in Resources */,

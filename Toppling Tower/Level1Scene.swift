@@ -43,7 +43,7 @@ class Level1Scene: GameScene, SKPhysicsContactDelegate {
         
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         
         if CheckForGameOver() == true {
             
@@ -79,7 +79,7 @@ class Level1Scene: GameScene, SKPhysicsContactDelegate {
                 for Node in nodesAtLocation {
                     if Node.name == "block" {
                         println("Should remove block")
-                        RemoveBlock(Node as SKShapeNode, method: .Dissolve)
+                        RemoveBlock(Node as! SKShapeNode, method: .Dissolve)
                     }
                 }
             case .Flame:
@@ -91,7 +91,7 @@ class Level1Scene: GameScene, SKPhysicsContactDelegate {
 //                }
                 self.enumerateChildNodesWithName("block*") {
                     node, stop in
-                    self.RemoveBlock(node as SKShapeNode, method: .Burn)
+                    self.RemoveBlock(node as! SKShapeNode, method: .Burn)
                 }
             case .Spark:
                 for node in blocksTouchingPlatform {

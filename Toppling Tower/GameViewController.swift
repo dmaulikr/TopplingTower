@@ -29,12 +29,12 @@ extension SKNode {
 
 extension SKNode {
     class func unarchiveFromFile<T:SKScene>(file : NSString) -> T? {
-        if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
+        if let path = NSBundle.mainBundle().pathForResource(file as String, ofType: "sks") {
             var sceneData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: nil)!
             var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
             
             archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
-            let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as T
+            let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! T
             archiver.finishDecoding()
             return scene
         } else {
@@ -52,7 +52,7 @@ class GameViewController: UIViewController {
         
         if let scene = MenuScene.unarchiveFromFile("MenuScene") as? MenuScene {
             // Configure the view.
-            let skView = self.view as SKView
+            let skView = self.view as! SKView
             skView.showsFPS = false
             skView.showsNodeCount = false
             skView.showsPhysics = false
