@@ -9,7 +9,7 @@ Toppling Tower is a 2D block stacking game for iOS 7 and 8.
 - **Devices**: iPhone 5s and 6  
 
 ### Gameplay
-The player controls a black platform in order to stack as many blocks as possible to avoid them falling into the abyss. If a block gets past the platform the player's "life" will drop. After 10 blocks have made it past the player, they lose. Random powers ups will also fall down. If the player can catch one with the platform, then they will gain a certain ability. Currently, the abilities include dissolve, inferno, shock, and bonus points.
+The player controls a platform in order to stack as many blocks as possible in order to avoid them falling into the abyss. If a block gets past the platform the player's "life" will drop. After 10 blocks have made it past the player, they lose. Random powers ups will also fall down. If the player catches one with the platform, then they will gain a certain ability. Currently, the abilities include **dissolve**, **inferno**, **shock**, and **bonus points**.
 
 ### Controls
 **Tilt** to move the platform left or right.
